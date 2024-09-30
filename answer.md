@@ -1,12 +1,12 @@
 # 第1次隨堂-隨堂-QZ1
 >
->學號：1234567
+>學號：112111205
 ><br />
->姓名：王小明
+>姓名：鄭宇辰
 ><br />
->作業撰寫時間：180 (mins，包含程式撰寫時間)
+>作業撰寫時間：40 (mins，包含程式撰寫時間)
 ><br />
->最後撰寫文件日期：2023/09/22
+>最後撰寫文件日期：2024/9/30
 >
 
 本份文件包含以下主題：(至少需下面兩項，若是有多者可以自行新增)
@@ -49,23 +49,49 @@ public void mt_getResult(){
 </body>
 </html>
 ```
+
 更多markdown方法可參閱[https://ithelp.ithome.com.tw/articles/10203758](https://ithelp.ithome.com.tw/articles/10203758)
 
 請在撰寫"說明程式與內容"該塊內容，請把原該塊內上述敘述刪除，該塊上述內容只是用來指引該怎麼撰寫內容。
 
-1. 請執行下面Git操作 (請參照題目pdf)
+1. 請參閱投影片Topic0_1的第37頁，並於專案下開啟一個1.py的檔案，將該頁程式鍵入後，請再依照程式內的person1實例，再生成一個person2，並觀察和person1的差異
+```py
+class Person:
+    name: str
+    age: int
 
-Ans:
+    def __init__(self, name: str, age: int):
+        self.name = name
+        self.age = age
 
-2. 請整理課堂上所提的Git指令，顯示其語法語給予明顯的例子
+    def greet(self) -> str:
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
 
-Ans:
+    def haveBirthday(self):
+        self.age += 1
+        print(f"Happy birthday, {self.name}! You are now {self.age} years old.")
 
-3. 請先寫出同學認為資料結構一門課每周需要花多少時間？並提出理由。並將「請問要學習大學的資料結構每一週需要對於一般大學生需要多少時間」貼入chatgpt，並將其所建議的敘述貼出後，比較同學所認為若是每周低於chatgpt所評估的時間，兩者主要差異為何？應該怎麼安排自己時間了解資料結構？
 
+# 創建 Person 類的實例
+person1 = Person(name="Alice", age=30)
 
-Ans:
+# 呼叫 greet 方法
+print(person1.greet())  # 輸出: Hello, my name is Alice and I am 30 years old.
 
-## 個人認為完成作業須具備觀念
+# 呼叫 haveBirthday 方法
+person1.haveBirthday()  # 輸出: Happy birthday, Alice! You are now 31 years old.
 
-開始寫說明，需要說明本次練習需學會那些觀念 (需寫成文章，需最少50字，並且文內不得有你、我、他三種文字)且必須提供完整與練習相關過程的notion筆記連結
+# 再呼叫 greet 方法
+print(person1.greet())  # 輸出: Hello, my name is Alice and I am 31 years old.
+
+person2 = Person(name="Alan", age=20)
+
+# 呼叫 greet 方法
+print(person2.greet())  # 輸出: Hello, my name is Alice and I am 30 years old.
+
+# 呼叫 haveBirthday 方法
+person2.haveBirthday()  # 輸出: Happy birthday, Alice! You are now 31 years old.
+
+# 再呼叫 greet 方法
+print(person2.greet())  # 輸出: Hello, my name is Alice and I am 31 years old.
+```
